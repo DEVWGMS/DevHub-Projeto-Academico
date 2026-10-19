@@ -1,55 +1,103 @@
-# DevHub
 
-## 1. Dados básicos
+# DevHub - Portal de Projetos
 
-**Nome:** Wallace Gabriel Moreira da Silva
+## Sobre o projeto
 
-**Matrícula:** 929805
+O DevHub é um portal desenvolvido para apresentar projetos de programação de forma simples e organizada. A aplicação possui uma página inicial que exibe cards de projetos e uma página de detalhes que apresenta informações adicionais sobre cada projeto.
 
-**Proposta escolhida:** Proposta 1 — Pessoas e Produções
+Os dados são armazenados em uma estrutura JavaScript no formato de objetos e arrays, permitindo que os cards e as páginas de detalhes sejam gerados dinamicamente.
 
-### Descrição do projeto
+## Autor
 
-O DevHub é uma aplicação web voltada para a comunidade de desenvolvedores. A plataforma tem como objetivo permitir a apresentação e descoberta de projetos desenvolvidos por diferentes pessoas.
+- **Nome:** Wallace Gabriel Moreira da Silva
+- **Curso:** Bacharelado em Sistemas de Informação
 
-A entidade principal do projeto é o desenvolvedor, enquanto a entidade secundária são os projetos, estabelecendo uma relação entre as pessoas e suas produções.
+## Tecnologias utilizadas
 
-## 2. Wireframe
+- HTML5
+- CSS3
+- JavaScript
 
-![Wireframe do DevHub](public/images/prototipo.png)
+## Funcionalidades
 
-## 3. Home-page
+- Exibição dinâmica dos projetos na página inicial.
+- Cards com título, descrição e categoria.
+- Navegação para a página de detalhes de cada projeto.
+- Identificação do projeto por meio do parâmetro `id` na URL.
+- Exibição das informações completas do projeto selecionado.
+- Layout responsivo para diferentes tamanhos de tela.
 
-A home-page foi desenvolvida utilizando **HTML5, CSS3 e Bootstrap 5**, com foco em responsividade e adaptação para diferentes tamanhos de tela.
+## Estrutura do projeto
 
-### Versão Desktop
+```text
+DevHub-Projeto-Academico/
+├── public/
+│   ├── css/
+│   │   └── style.css
+│   ├── imagens/
+│   ├── js/
+│   │   └── app.js
+│   ├── index.html
+│   └── detalhes.html
+└── README.md
+```
 
-![DevHub Desktop](public/images/desktop.png)
+## Capturas de tela
 
-### Versão Mobile
+### Página inicial
 
-![DevHub Mobile](public/images/mobile.png)
+![Página inicial do DevHub](/public/images/home.png)
 
-## 4. Responsividade com Bootstrap
+### Página de detalhes
 
-Na segunda etapa do projeto, a home-page foi refatorada utilizando o framework **Bootstrap**, substituindo os recursos de responsividade anteriormente implementados diretamente com CSS.
+![Página de detalhes de um projeto](/public/images/detalhe.png)
 
-Foram utilizados recursos como:
+## Estrutura de dados JSON
 
-* Grid responsivo do Bootstrap;
-* Classes `container`, `row` e `col`;
-* Classes responsivas para diferentes tamanhos de tela;
-* Classes de formulário;
-* Botões responsivos;
-* Classes utilitárias de espaçamento e alinhamento;
-* Bootstrap via CDN.
+Os projetos são armazenados em um array de objetos JavaScript no arquivo `public/js/app.js`.
 
-A versão responsiva foi registrada no Git com a tag **v2.0**.
+```javascript
+const dados = [
+    {
+        id: 1,
+        titulo: "Sistema de Controle de Estoque",
+        descricao: "Sistema para organizar produtos e quantidades.",
+        conteudo: "O projeto permite cadastrar produtos, acompanhar as quantidades disponíveis e organizar as informações do estoque de maneira simples e eficiente.",
+        categoria: "Sistemas",
+        autor: "Wallace Gabriel",
+        data: "2026-10-18",
+        imagem: "imagens/projeto1.png"
+    },
+    {
+        id: 2,
+        titulo: "Portfólio de Desenvolvedor",
+        descricao: "Página para apresentar projetos e habilidades.",
+        conteudo: "O portfólio apresenta informações profissionais, habilidades técnicas, tecnologias utilizadas e projetos desenvolvidos pelo programador.",
+        categoria: "Desenvolvimento Web",
+        autor: "Wallace Gabriel",
+        data: "2026-10-18",
+        imagem: "imagens/projeto2.png"
+    },
+    {
+        id: 3,
+        titulo: "Catálogo de Produtos",
+        descricao: "Catálogo interativo com pesquisa e categorias.",
+        conteudo: "O catálogo permite visualizar produtos, consultar suas descrições e organizar os resultados por categoria. A proposta é facilitar a navegação e a localização dos produtos.",
+        categoria: "Desenvolvimento Web",
+        autor: "Wallace Gabriel",
+        data: "2026-10-18",
+        imagem: "imagens/projeto3.png"
+    }
+];
+```
 
-## 5. Tecnologias utilizadas
+## Como executar
 
-* HTML5
-* CSS3
-* Bootstrap 5
-* Git
-* GitHub
+1. Clone o repositório do GitHub.
+2. Abra a pasta do projeto no Visual Studio Code.
+3. Abra o arquivo `public/index.html` com a extensão Live Server.
+4. Clique em "Ver detalhes" para consultar as informações de cada projeto.
+
+## Observação
+
+Os projetos apresentados e seus dados são fictícios e foram utilizados para demonstrar o funcionamento da aplicação.

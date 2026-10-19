@@ -1,169 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevHub - Comunidade de Devs</title>
-  
-  <meta property="og:title" content="DevHub">
-  <meta property="og:description" content="Plataforma para devs compartilharem projetos e ideias.">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevHub | Projetos de Desenvolvedores</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
 </head>
 <body>
+    <header class="cabecalho">
+        <h1>DevHub</h1>
+        <p>Conheça projetos desenvolvidos por programadores.</p>
+    </header>
 
-  <header class="header">
-  <div class="container">
-    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 py-3">
-
-      <a href="#" class="logo">Dev<span>Hub</span></a>
-
-      <nav class="d-flex gap-3">
-        <a href="#projetos">Projetos</a>
-        <a href="#newsletter">Newsletter</a>
-        <a href="#sobre">Sobre</a>
-      </nav>
-
-      <form class="d-flex">
-        <input
-          type="search"
-          class="form-control"
-          placeholder="Buscar projetos..."
-        >
-      </form>
-
-    </div>
-  </div>
-</header>
-<div class="ad-banner-top">
-  <div class="container">
-    <p>🚀 Anuncie aqui! <a href="#">Saiba mais</a></p>
-  </div>
-</div>
-  <main>
-
-    <section class="hero">
-  <div class="container">
-    <div class="row align-items-center g-4">
-
-      <div class="col-12 col-md-6">
-        <div class="hero-text">
-          <h1>Conecte-se e mostre seus projetos para o mundo</h1>
-
-          <p>O DevHub é um espaço simples para devs divulgarem repositórios, receberem feedbacks e encontrarem novos parceiros de código.</p>
-
-          <a href="#projetos" class="btn btn-primary">Ver projetos</a>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6">
-        <div class="hero-media">
-          <img
-            src="https://picsum.photos/id/0/600/400"
-            class="img-fluid rounded"
-            alt="Espaço de trabalho de um desenvolvedor"
-          >
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-    <section id="projetos" class="projects">
-      <div class="container">
-        <h2>Projetos da comunidade</h2>
-
-        <div class="row g-4">
-          
-          <article class="col-12 col-sm-6 col-lg-3">
-            <img src="https://picsum.photos/id/1/400/250" alt="Sistema de Irrigação">
-            <div class="card-body">
-              <span class="badge">IoT / Hardware</span>
-              <h3>Sistema de Irrigação Inteligente</h3>
-              <p>Automação residencial simples com sensores para controle de rega de plantas.</p>
-              <a href="#">Acessar projeto &rarr;</a>
+    <main class="container">
+        <section>
+            <h2>Projetos disponíveis</h2>
+            <div id="lista-projetos">
+                <p>Carregando projetos...</p>
             </div>
-          </article>
+        </section>
+    </main>
 
-          <article class="col-12 col-sm-6 col-lg-3">
-            <img src="https://picsum.photos/id/20/400/250" alt="DevHub App">
-            <div class="card-body">
-              <span class="badge">Mobile</span>
-              <h3>DevHub App</h3>
-              <p>Gerenciador de tarefas e quadros Kanban voltado para estudantes de programação.</p>
-              <a href="#">Acessar projeto &rarr;</a>
-            </div>
-          </article>
-
-          <article class="col-12 col-sm-6 col-lg-3">
-            <img src="https://picsum.photos/id/48/400/250" alt="Controle de Estoque">
-            <div class="card-body">
-              <span class="badge">Web App</span>
-              <h3>Gestor de Estoque Simples</h3>
-              <p>Dashboard para pequenas empresas monitorarem a validade e a quantidade de produtos.</p>
-              <a href="#">Acessar projeto &rarr;</a>
-            </div>
-          </article>
-
-          <article class="col-12 col-sm-6 col-lg-3">
-            <img src="https://picsum.photos/id/60/400/250" alt="Portfólio em HTML/CSS">
-            <div class="card-body">
-              <span class="badge">Frontend</span>
-              <h3>Template de Portfólio</h3>
-              <p>Modelo responsivo e leve construído apenas com HTML e CSS puro para iniciantes.</p>
-              <a href="#">Acessar projeto &rarr;</a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="newsletter" class="newsletter-section">
-      <div class="container">
-        <div class="newsletter-box">
-          <h3>Fique por dentro das novidades</h3>
-          <p>Receba semanalmente uma seleção com os melhores projetos postados na plataforma.</p>
-          <form class="row g-2 justify-content-center">
-  <div class="col-12 col-md-8">
-    <input
-      type="email"
-      class="form-control"
-      placeholder="Seu melhor e-mail"
-      required
-    >
-  </div>
-
-  <div class="col-12 col-md-auto">
-    <button type="submit" class="btn btn-primary w-100">
-      Inscrever-se
-    </button>
-  </div>
-</form>
-        </div>
-      </div>
-    </section>
-
-    <section id="sobre" class="about">
-      <div class="container">
-        <h2>Sobre o projeto</h2>
-        <p>O DevHub nasceu como um projeto acadêmico para ajudar estudantes e desenvolvedores iniciantes a estruturarem seus primeiros portfólios e praticarem colaboração em código.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-  <p class="mb-0">© 2026 DevHub</p>
-
-  <div class="d-flex gap-3">
-    <a href="#">GitHub</a>
-    <a href="#">LinkedIn</a>
-  </div>
-</div>
-  </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="rodape">
+        <p>&copy; Todos os direitos reservados 2026 DevHub</p>
+    </footer>
 </body>
 </html>
